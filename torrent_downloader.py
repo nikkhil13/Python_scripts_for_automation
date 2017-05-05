@@ -9,6 +9,9 @@ import urllib
 import urllib2
 import subprocess
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 download_url = 'https://ukpirateproxy.xyz'
 
 def ask_user():
@@ -37,7 +40,7 @@ def start_download(torrent_no):
 
 	link = soup.find('a', attrs = {'title':'Get this torrent'})['href']
 
-	with open('test.txt','wb') as output:
+	with open('test.txt','w') as output:
 	 	output.write(link)
 
 	'''In the text.txt file, you will find a magnet link. 
