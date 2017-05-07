@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import os
 import requests
 import re
@@ -9,8 +10,8 @@ import urllib
 import urllib2
 import subprocess
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+import win_unicode_console as wp
+wp.enable()
 
 download_url = 'https://ukpirateproxy.xyz'
 
